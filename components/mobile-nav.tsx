@@ -5,15 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, Search, X } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
+import { categories } from "@/lib/data";
 import { SITE_GITHUB } from "@/lib/site";
 
 const nav = [
   { label: "Browse", href: "/browse" },
-  { label: "Skills", href: "/claude-skills" },
-  { label: "MCP", href: "/mcp-servers" },
-  { label: "Copilot", href: "/copilot-agents" },
-  { label: "Workflows", href: "/ai-workflows" },
-  { label: "Rules", href: "/cursor-rules" },
   { label: "Learn", href: "/learn" },
   { label: "Blog", href: "/blog" },
 ];
@@ -66,13 +62,24 @@ export function MobileNav() {
           <div className="fixed inset-x-0 top-16 z-40 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-line bg-bg px-4 py-4 shadow-2xl sm:px-6">
             <nav className="flex flex-col gap-0.5">
               {nav.map((n) => (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  className="rounded-md px-3 py-2.5 text-sm text-muted transition-colors hover:bg-surface hover:text-fg"
-                >
-                  {n.label}
-                </Link>
+                <div key={n.href} className="flex flex-col gap-0.5">
+                  <Link
+                    href={n.href}
+                    className="rounded-md px-3 py-2.5 text-sm text-muted transition-colors hover:bg-surface hover:text-fg"
+                  >
+                    {n.label}
+                  </Link>
+                  {n.href === "/browse" &&
+                    categories.map((c) => (
+                      <Link
+                        key={c.href}
+                        href={c.href}
+                        className="ml-4 rounded-md border-l border-line px-3 py-2 text-sm text-muted transition-colors hover:bg-surface hover:text-fg"
+                      >
+                        {c.name}
+                      </Link>
+                    ))}
+                </div>
               ))}
             </nav>
 
@@ -97,6 +104,13 @@ export function MobileNav() {
                 <GithubIcon className="h-4 w-4" />
                 Star on GitHub
               </a>
+
+              <Link
+                href="/advertise"
+                className="flex items-center justify-center rounded-lg border border-accent/40 px-3.5 py-2.5 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
+              >
+                Advertise
+              </Link>
 
               <Link
                 href="/submit"

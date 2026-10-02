@@ -3,17 +3,12 @@ import { ArrowUpRight, Terminal } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CommandMenu } from "@/components/command-menu";
 import { MobileNav } from "@/components/mobile-nav";
+import { BrowseMenu } from "@/components/browse-menu";
 import { GithubIcon } from "@/components/icons";
 import { cards } from "@/lib/content";
 import { SITE_GITHUB } from "@/lib/site";
 
 const nav = [
-  { label: "Browse", href: "/browse" },
-  { label: "Skills", href: "/claude-skills" },
-  { label: "MCP", href: "/mcp-servers" },
-  { label: "Copilot", href: "/copilot-agents" },
-  { label: "Workflows", href: "/ai-workflows" },
-  { label: "Rules", href: "/cursor-rules" },
   { label: "Learn", href: "/learn" },
   { label: "Blog", href: "/blog" },
 ];
@@ -33,7 +28,8 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="ml-3 hidden items-center gap-0.5 lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-0.5 lg:flex">
+          <BrowseMenu />
           {nav.map((n) => (
             <Link
               key={n.href}
@@ -61,6 +57,13 @@ export function SiteHeader() {
           </a>
 
           <ThemeToggle />
+
+          <Link
+            href="/advertise"
+            className="hidden h-9 items-center rounded-lg border border-accent/40 px-3.5 text-sm font-medium text-accent transition-colors hover:bg-accent/10 sm:flex"
+          >
+            Advertise
+          </Link>
 
           <Link
             href="/submit"
