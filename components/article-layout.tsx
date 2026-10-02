@@ -5,6 +5,11 @@ import { GithubIcon } from "@/components/icons";
 import { AUTHOR_NAME, AUTHOR_BIO, SITE_GITHUB } from "@/lib/site";
 import type { Toc } from "@/lib/content";
 
+// Trailing slash on each item, so a wrapped line never starts with a separator.
+// Hidden on phones, where the row wraps and a slash at the line end looks stray.
+const META_SEP =
+  "after:ml-3 after:text-muted/50 after:content-['/'] after:font-normal max-sm:after:hidden";
+
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
@@ -49,13 +54,15 @@ export function ArticleLayout({
               {kind}
             </span>
           )}
-          <time dateTime={date}>Published {formatDate(date)}</time>
+          <time dateTime={date} className={META_SEP}>
+            Published {formatDate(date)}
+          </time>
           {updated && updated !== date && (
-            <time dateTime={updated} className="text-fg">
+            <time dateTime={updated} className={`${META_SEP} text-fg`}>
               Updated {formatDate(updated)}
             </time>
           )}
-          <span className="inline-flex items-center gap-1">
+          <span className={`inline-flex items-center gap-1 ${META_SEP}`}>
             <Clock className="h-3.5 w-3.5" />
             {readingTime} min read
           </span>
