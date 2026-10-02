@@ -14,7 +14,7 @@ export const SITE_DESCRIPTION =
 /** Contact + ownership. Single source of truth for legal/company pages. */
 export const SITE_OPERATOR = "AI Assets Directory";
 export const SITE_EMAIL = "contact@aiassetsdirectory.com";
-export const SITE_GITHUB = "https://github.com/lorenzomeolav32-png/AI_asset_hub";
+export const SITE_GITHUB = "https://github.com/lorenzomeolav32-png/AI_assets_directory";
 
 /** Companion open-source list, cross-linked for backlinks + discovery. */
 export const AWESOME_LIST_URL =
