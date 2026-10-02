@@ -32,10 +32,10 @@ cambia `content/assets/**` en `main`. Necesita un secret una sola vez:
 1. GitHub → tu avatar → *Settings* → *Developer settings* → *Personal access tokens*
    → *Fine-grained tokens* → *Generate new token*.
 2. *Repository access* → *Only select repositories* → elige
-   `awesome-claude-skills-mcp-servers` (no `AI_asset_hub`).
+   `awesome-claude-skills-mcp-servers` (no `AI_assets_directory`).
 3. *Permissions* → *Repository permissions* → *Contents* → **Read and write**. Nada más.
 4. Genera el token y cópialo (solo se muestra una vez).
-5. En el repo `AI_asset_hub` → *Settings* → *Secrets and variables* → *Actions* →
+5. En el repo `AI_assets_directory` → *Settings* → *Secrets and variables* → *Actions* →
    *New repository secret* → nombre `AWESOME_REPO_TOKEN`, pega el valor, guarda.
 
 El token nunca debe pegarse en el chat ni guardarse en el repo — solo como secret
