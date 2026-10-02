@@ -183,6 +183,7 @@ body {
   color: var(--muted);
   font-size: 0.975rem;
   line-height: 1.75;
+  overflow-wrap: break-word;
 }
 .prose > * + * {
   margin-top: 1.1em;
@@ -263,7 +264,9 @@ body {
   line-height: 1.7;
 }
 .prose table {
+  display: block;
   width: 100%;
+  overflow-x: auto;
   border-collapse: collapse;
   font-size: 0.9rem;
 }

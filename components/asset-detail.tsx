@@ -96,7 +96,7 @@ export function AssetDetail({ asset }: { asset: Asset }) {
         <p className="mt-3 max-w-2xl text-lg text-muted">{asset.summary}</p>
       </header>
 
-      <div className="grid gap-10 pt-10 lg:grid-cols-[1fr_320px]">
+      <div className="grid grid-cols-1 gap-10 pt-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         {/* main */}
         <div className="min-w-0">
           {asset.video && (
@@ -146,7 +146,7 @@ export function AssetDetail({ asset }: { asset: Asset }) {
         </div>
 
         {/* sidebar */}
-        <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
+        <aside className="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start">
           <VoteButton slug={asset.slug} />
 
           {asset.install && (
