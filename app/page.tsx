@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Boxes, ShieldCheck, Terminal } from "lucide-react";
 import { AssetCard } from "@/components/asset-card";
+import { AdvertiseBanner } from "@/components/advertise-banner";
 import { CategoryTile } from "@/components/category-tile";
 import { HeroSearchBar } from "@/components/hero-search-bar";
 import { GithubIcon } from "@/components/icons";
@@ -93,6 +94,11 @@ export default function Home() {
             </span>
           ))}
         </div>
+      </section>
+
+      {/* ── Advertise ────────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
+        <AdvertiseBanner />
       </section>
 
       {/* ── Categories ───────────────────────────────────────────────────── */}
