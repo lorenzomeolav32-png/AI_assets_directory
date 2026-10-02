@@ -9,6 +9,7 @@
     "lint": "eslint",
     "velite": "velite",
     "check:review": "node scripts/check-review-due.mjs",
+    "review:mark": "node scripts/mark-reviewed.mjs",
     "awesome:generate": "node scripts/generate-awesome-readme.mjs --out ../awesome-claude-skills-mcp-servers/README.md"
   },
   "dependencies": {

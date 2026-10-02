@@ -49,23 +49,23 @@ export function ArticleLayout({
               {kind}
             </span>
           )}
-          <span>{formatDate(date)}</span>
+          <time dateTime={date}>Published {formatDate(date)}</time>
+          {updated && updated !== date && (
+            <time dateTime={updated} className="text-fg">
+              Updated {formatDate(updated)}
+            </time>
+          )}
           <span className="inline-flex items-center gap-1">
             <Clock className="h-3.5 w-3.5" />
             {readingTime} min read
           </span>
-          <span>· by {author}</span>
+          <span>by {author}</span>
         </div>
 
         <h1 className="mt-4 max-w-3xl font-display text-3xl font-bold leading-tight text-fg sm:text-4xl">
           {title}
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-muted">{summary}</p>
-        {updated && (
-          <p className="mt-3 font-mono text-[11px] text-muted">
-            updated {formatDate(updated)}
-          </p>
-        )}
       </header>
 
       <div className="grid gap-10 pt-10 lg:grid-cols-[1fr_220px]">

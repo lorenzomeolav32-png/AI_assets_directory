@@ -103,6 +103,10 @@ manifiesto) cada ~6 meses.
 | [blog] gpt-6-astra-what-actually-changed | rápido | 2026-09-07 | 2026-11-07 | ⬜ |
 | [blog] is-grok-really-more-powerful | rápido | 2026-09-07 | 2026-11-07 | ⬜ |
 | [learn] what-is-a-deepseek-harness-and-how-to-install-it | rápido | 2026-09-07 | 2026-11-07 | ⬜ |
+| [learn] what-are-ai-workflows-and-how-to-install-one | rápido | 2026-09-18 | 2026-11-18 | ⬜ |
+| [learn] what-are-copilot-agents-and-how-to-install-one | rápido | 2026-09-18 | 2026-11-18 | ⬜ |
+| [learn] what-are-cursor-rules-and-how-to-install-one | rápido | 2026-09-18 | 2026-11-18 | ⬜ |
+| [blog] ai-price-cuts-cost-per-task-not-sticker-price | rápido | 2026-09-24 | 2026-11-24 | ⬜ |
 | [blog] prompt-engineering-examples-ai-agents | evergreen | 2026-09-14 | 2027-03-14 | ⬜ |
 | [blog] seo-skills-for-ai-agents-2026 | evergreen | 2026-09-14 | 2027-03-14 | ⬜ |
 | [blog] why-a-curated-directory | evergreen | 2026-08-24 | 2027-02-24 | ⬜ |
@@ -112,10 +116,18 @@ manifiesto) cada ~6 meses.
 | [learn] how-to-install-a-claude-skill | evergreen | 2026-08-22 | 2027-02-22 | ⬜ |
 | [learn] what-are-claude-skills | evergreen | 2026-08-18 | 2027-02-18 | ⬜ |
 | [learn] what-makes-a-good-ai-prompt | evergreen | 2026-09-14 | 2027-03-14 | ⬜ |
+| [blog] how-to-create-a-custom-ai-skill | evergreen | 2026-09-18 | 2027-03-18 | ⬜ |
+| [blog] design-skills-for-ai-agents-2026 | evergreen | 2026-10-02 | 2027-04-02 | ⬜ |
+| [blog] how-we-vet-a-skill-before-listing-it | evergreen | 2026-10-02 | 2027-04-02 | ⬜ |
+| [blog] open-source-mcp-servers-that-are-paid-services | evergreen | 2026-10-02 | 2027-04-02 | ⬜ |
 
 > El campo `reviewBy` ya vive en el frontmatter de cada `.md` (`content/blog/`,
 > `content/learn/`) y en el esquema de Velite (`velite.config.ts`). Todo artículo nuevo
 > debe llevarlo desde el principio: rápido → `date + 2 meses`, evergreen → `date + 6 meses`.
+>
+> Al revisar un artículo: `npm run review:mark -- <slug>` mueve `reviewBy` y marca la fila
+> como ✅. Si además cambiaste el contenido, añade `--changed`: pone `updated: hoy`, que es
+> la fecha "Updated" que ve el lector. Sin cambios de contenido, no uses `--changed`.
 
 ---
 
