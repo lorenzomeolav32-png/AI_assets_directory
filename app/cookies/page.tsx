@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
 import { pageMeta } from "@/lib/seo";
+import { CookieSettingsButton } from "@/components/cookie-notice";
 import { SITE_EMAIL, LEGAL_LAST_UPDATED } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Cookie Policy",
   description:
-    "AI Assets Directory uses only essential and functional storage: no advertising or cross-site tracking cookies. Here is exactly what we store and why.",
+    "AI Assets Directory uses essential storage and, only with your consent, Google Analytics cookies. No advertising cookies. Here is exactly what we store and why.",
   path: "/cookies",
   eyebrow: "cookies & storage",
 });
@@ -18,7 +19,7 @@ export default function CookiesPage() {
       label="Cookies"
       command="~/legal/cookies"
       title="Cookie Policy"
-      lead="We use only essential and functional storage. No advertising or cross-site tracking cookies."
+      lead="Essential storage always. Google Analytics cookies only if you accept. No advertising cookies."
       updated={LEGAL_LAST_UPDATED}
       prose
     >
@@ -31,10 +32,14 @@ export default function CookiesPage() {
 
       <h2>The short version</h2>
       <p>
-        We do <strong>not</strong> use advertising cookies, and we do{" "}
-        <strong>not</strong> use cross-site or third-party tracking. There are no
-        marketing pixels on this site. Because we set no non-essential cookies,
-        there is nothing to opt in or out of today.
+        We do <strong>not</strong> use advertising cookies and there are no
+        marketing pixels on this site. We use Google Analytics to measure
+        audience and usage, but <strong>only if you click Accept</strong> in the
+        cookie banner. Until then, no analytics script is loaded and no
+        analytics cookie is set. You can change your choice at any time.
+      </p>
+      <p>
+        <CookieSettingsButton className="text-accent hover:underline" />
       </p>
 
       <h2>What we actually store</h2>
@@ -46,9 +51,9 @@ export default function CookiesPage() {
           your device.
         </li>
         <li>
-          <strong>Cookie-notice dismissal (functional).</strong> When you dismiss
-          the cookie notice, we store a small flag in local storage so we do not
-          show it again. It stays on your device.
+          <strong>Cookie choice (functional).</strong> We store your Accept or
+          Reject decision in local storage so we do not ask again. It stays on
+          your device.
         </li>
         <li>
           <strong>Essential hosting.</strong> Our host (Vercel) may set minimal,
@@ -57,25 +62,41 @@ export default function CookiesPage() {
         </li>
       </ul>
 
+      <h2>Analytics cookies (only with your consent)</h2>
+      <p>
+        If you accept, we load Google Analytics 4, provided by Google Ireland
+        Limited, to count visits and understand which pages are useful. It sets
+        these first-party cookies:
+      </p>
+      <ul>
+        <li>
+          <strong>_ga</strong>: distinguishes visitors. Expires after 2 years.
+        </li>
+        <li>
+          <strong>_ga_&lt;ID&gt;</strong>: keeps session state. Expires after 2
+          years.
+        </li>
+      </ul>
+      <p>
+        We do not use Google Signals, advertising features or remarketing, and
+        we do not combine this data with other sources. If you reject or later
+        withdraw consent, the script is not loaded and these cookies are
+        deleted.
+      </p>
+
       <h2>What we do not use</h2>
       <ul>
         <li>Advertising or retargeting cookies.</li>
         <li>Cross-site or social-media tracking pixels.</li>
-        <li>Analytics that profiles individual visitors.</li>
+        <li>Any analytics before you give consent.</li>
       </ul>
-
-      <h2>If this changes</h2>
-      <p>
-        If we later add analytics or advertising, we will update this page first
-        and, where the law requires it, ask for your consent before any
-        non-essential cookies are set.
-      </p>
 
       <h2>Managing storage yourself</h2>
       <p>
         You can clear or block cookies and local storage at any time from your
-        browser settings. Clearing them simply resets your theme choice and the
-        cookie notice. It will not break the site.
+        browser settings. Clearing them simply resets your theme choice and your
+        cookie choice, so the banner will appear again. It will not break the
+        site.
       </p>
 
       <p>

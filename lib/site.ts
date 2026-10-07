@@ -26,7 +26,7 @@ export const AUTHOR_BIO =
   "I use agentic AI daily in my day job to build tools, and I've spent months learning how these systems actually work under the hood. I'm not an AI expert by title, just someone building this directory so other developers can find AI assets that are genuinely useful and verified to work, not just indexed.";
 
 /** Human-readable date the legal pages were last reviewed. */
-export const LEGAL_LAST_UPDATED = "September 1, 2026";
+export const LEGAL_LAST_UPDATED = "October 7, 2026";
 
 /** Absolute URL from a root-relative path. */
 export const abs = (path: string) =>

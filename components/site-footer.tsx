@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Terminal } from "lucide-react";
 import { GithubIcon } from "@/components/icons";
 import { SubscribeForm } from "@/components/subscribe-form";
+import { CookieSettingsButton } from "@/components/cookie-notice";
 import { AWESOME_LIST_URL, SITE_GITHUB } from "@/lib/site";
 
 const cols: { title: string; links: [string, string][] }[] = [
@@ -93,6 +94,11 @@ export function SiteFooter() {
                       </li>
                     );
                   })}
+                  {c.title === "Legal" && (
+                    <li>
+                      <CookieSettingsButton className="text-sm text-muted transition-colors hover:text-fg" />
+                    </li>
+                  )}
                 </ul>
               </div>
             ))}

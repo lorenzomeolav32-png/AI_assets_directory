@@ -50,6 +50,13 @@ export default function PrivacyPage() {
           submission, we keep the contents so we can reply and follow up.
         </li>
         <li>
+          <strong>Usage analytics (only with consent).</strong> If you accept
+          analytics cookies, Google Analytics collects pseudonymous data about
+          your visit: pages viewed, approximate location, device and browser,
+          referrer, and a random identifier stored in a cookie. IP addresses are
+          not logged or stored by Google Analytics 4.
+        </li>
+        <li>
           <strong>Technical logs.</strong> Our hosting provider automatically
           records standard request data (IP address, browser/user-agent, pages
           requested, timestamps) to keep the site secure and running.
@@ -64,15 +71,17 @@ export default function PrivacyPage() {
       <h2>What we do not do</h2>
       <ul>
         <li>We never sell or rent your personal data.</li>
-        <li>We do not run advertising or cross-site tracking cookies.</li>
+        <li>We do not run advertising cookies or marketing pixels.</li>
         <li>We do not build advertising profiles about you.</li>
+        <li>We do not load analytics before you consent.</li>
       </ul>
 
       <h2>Why we use it (legal bases)</h2>
       <ul>
         <li>
-          <strong>Consent</strong>: sending you the newsletter. You can
-          withdraw at any time (see below).
+          <strong>Consent</strong>: sending you the newsletter and using Google
+          Analytics cookies. You can withdraw consent at any time (newsletter:
+          unsubscribe link; analytics: “Cookie settings” in the footer).
         </li>
         <li>
           <strong>Legitimate interests</strong>: keeping the site secure,
@@ -91,6 +100,11 @@ export default function PrivacyPage() {
           store (used to hold newsletter emails). Vercel processes request logs
           as part of serving the site.
         </li>
+        <li>
+          <strong>Google Ireland Limited / Google LLC</strong>: Google
+          Analytics 4, loaded only if you accept analytics cookies. Google acts
+          as our processor.
+        </li>
       </ul>
       <p>
         These providers act as our processors under a data processing agreement.
@@ -102,7 +116,8 @@ export default function PrivacyPage() {
       <p>
         Our providers may process data on servers outside your country,
         including in the United States. Where required, such transfers rely on
-        appropriate safeguards such as the EU Standard Contractual Clauses.
+        appropriate safeguards such as the EU–US Data Privacy Framework or the
+        EU Standard Contractual Clauses.
       </p>
 
       <h2>How long we keep it</h2>
@@ -114,6 +129,10 @@ export default function PrivacyPage() {
         <li>
           <strong>Messages</strong>: for as long as needed to handle your
           request, then archived or deleted.
+        </li>
+        <li>
+          <strong>Analytics data</strong>: up to 14 months, then automatically
+          deleted by Google Analytics.
         </li>
         <li>
           <strong>Technical logs</strong>: for a short period for security and
@@ -139,7 +158,8 @@ export default function PrivacyPage() {
 
       <h2>Cookies &amp; local storage</h2>
       <p>
-        We use only essential and functional storage. The details are in our{" "}
+        We use essential and functional storage, plus analytics cookies only
+        with your consent. The details are in our{" "}
         <Link href="/cookies">Cookie Policy</Link>.
       </p>
 
